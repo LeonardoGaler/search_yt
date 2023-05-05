@@ -1,6 +1,10 @@
 use wasm_bindgen::{JsCast, UnwrapThrowExt};
 use web_sys::{Event, HtmlInputElement, InputEvent};
 use yew::{function_component, html, use_state, Callback, Properties, UseStateHandle};
+use crate::youtube::search_youtube;
+
+mod youtube;
+
 fn main() {
    yew::start_app::<App>();
 }
@@ -38,11 +42,6 @@ fn app() -> Html {
         <VideoPlayer video_title="{video.unwrap().name}" video_id="{video.unwrap().id}"/>
         </main>
     }
-}
-
-fn search_youtube(text_to_search: String) -> String {
-    web_sys::console::log_1(&text_to_search.into());
-    String::from("dQw4w9WgXcQ")
 }
 
 #[derive(Properties, PartialEq)]

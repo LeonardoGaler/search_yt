@@ -9,3 +9,4 @@ edition = "2021"
 yew = "0.19.3"
 web-sys = {version = "0.3.60", features = ["Event", "InputEvent"]}
 wasm-bindgen = "0.2.83"
+gloo-net = "0.2.4"
